@@ -1,0 +1,19 @@
+{
+  "name": "phase-2-challenge",
+  "version": "1.0.0",
+  "description": "Phase 2 coding challenge for Learners Guild",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leikkisa/phase-2-challenge.git"
+  },
+  "author": "Sally Maki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leikkisa/phase-2-challenge/issues"
+  },
+  "homepage": "https://github.com/leikkisa/phase-2-challenge#readme"
+}
