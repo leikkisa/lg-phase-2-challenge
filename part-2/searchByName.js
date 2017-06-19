@@ -3,13 +3,13 @@ var clients = require('./clients')
 let name = process.argv[2]
 console.log('Finding clients with name "' + name + '"...')
 
-function filterByName(item) {
-  if (item.rep_name.toLowerCase().startsWith(name.toLowerCase())) {
-    return true
-  }
-  return false
-}
+var clientsByName = clients.filter((item) => item.rep_name.toLowerCase().startsWith(name.toLowerCase()))
 
-var clientsByName = clients.filter(filterByName)
+var idAndRepByName = clientsByName.map(function(item) {
+   var result = {}
+   result.id = item.id
+   result.rep_name = item.rep_name
+   return result
+})
 
-console.log(clientsByName)
+console.log(idAndRepByName)
