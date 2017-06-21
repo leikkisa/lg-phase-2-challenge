@@ -1,15 +1,23 @@
 #!/usr/bin/env node
 var clients = require('./clients')
 let name = process.argv[2]
-console.log('Finding clients with name "' + name + '"...')
 
-var clientsByName = clients.filter((item) => item.rep_name.toLowerCase().startsWith(name.toLowerCase()))
+if (name === undefined) {
+  console.log("Please include the first letters of a name when running this file, for example: node searchByName.js Ad")
+} else {
+  console.log('Finding clients with name "' + name + '"...')
 
-var idAndRepByName = clientsByName.map(function(item) {
-   var result = {}
-   result.id = item.id
-   result.rep_name = item.rep_name
-   return result
-})
+  var clientsByName = clients.filter((item) => item.rep_name.toLowerCase().startsWith(name.toLowerCase()))
 
-console.log(idAndRepByName)
+  var idAndRepByName = clientsByName.map(function(item) {
+    var result = {}
+    result.id = item.id
+    result.rep_name = item.rep_name
+    return result
+  })
+  if (idAndRepByName.length === 0) {
+    console.log("No results found.")
+  } else {
+    console.log(idAndRepByName)
+  }
+}
