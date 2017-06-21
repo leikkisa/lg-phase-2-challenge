@@ -63,14 +63,14 @@ There is a return variable stored in an exit status at $?, 0 indicates success, 
 
 ----------------
 What does your ~/.gitconfig have in it? (paste the whole file here)
-
+```
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
 #	name = Sally Maki
 	email = sallymaki@gmail.com
 	name = leikkisa
-
+```
 ----------------
 What is the difference between a relative and absolute path?
 
