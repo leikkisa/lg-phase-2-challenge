@@ -1,26 +1,45 @@
+body {
+  font-family: 'Itim', cursive;
+}
+
 .header {
   border: 2px solid black;
   display: flex;
   width: 100%;
 }
 
+button {
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: 2px 2px;
+  padding: 5px;
+}
+
 .site-title {
   width: 50%;
+  padding: 5px 5px 5px 15px;
 }
 
 .cart {
   display: flex;
   justify-content: flex-end;
   width: 50%;
+  margin-right: 10px;
 }
 
 .container {
   display: flex;
+  width: 100%;
 }
 
 ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 5px;
 }
 
 .sections-nav {
@@ -28,9 +47,55 @@ ul {
   border-top: none;
   width: 200px;
   justify-content: flex-start;
+  float: left;
 }
 
 .sections-title {
   border-bottom: 2px solid black;
   background-color: #c3c3c3;
+  padding: 5px;
+}
+
+.main {
+  flex-grow: 100;
+}
+
+h1 {
+  padding-left: 15px;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px 30px 15px;
+}
+
+.main-section-title {
+  font-style: italic;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.main-items {
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.item-name {
+ width: 45%;
+}
+
+.item-price {
+
+}
+
+.item-cart {
+
 }
