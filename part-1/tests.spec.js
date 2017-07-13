@@ -1,14 +1,14 @@
-var { weekday, snippet, numProps, filterBetween } = require('./functions')
+const { weekday, snippet, numProps, filterBetween } = require('./functions')
 
 describe('weekday()', function() {
 
   it('returns Monday', function() {
-    let date = new Date(2017, 5, 19) // June 19, 2017
+    const date = new Date(2017, 5, 19) // June 19, 2017
     expect(weekday(date)).toEqual('Mon');
   })
 
   it('returns Thursday', function() {
-    let date = new Date(2017, 5, 19) // June 19, 2017
+    const date = new Date(2017, 5, 19) // June 19, 2017
     expect(weekday(new Date(2017, 5, 15))).toEqual('Thu')
   });
 
@@ -29,7 +29,7 @@ describe('snippet()', function() {
   })
 
   it('Throws an error if not passed a valid snippet', function() {
-    expect( function(){ snippet("hello", "goodbye") } ).toThrow(new Error("Please use a valid string and max length."))
+    expect( function(){ snippet("hello", "goodbye") } ).toThrow(new Error("Please use a valid max length."))
   })
 
 })
@@ -64,7 +64,7 @@ describe('filterBetween()', function() {
   })
 
   it('Throws an error if passed invalid inputs', function() {
-    expect( function(){ filterBetween([ 100, 200, 300 ], 'hello', 'goodbye') } ).toThrow(new Error("Please enter an array of numbers, and min and max numbers."))
+    expect( function(){ filterBetween([ 100, 200, 300 ], 'hello', 'goodbye') } ).toThrow(new Error("Please enter valid min and max numbers."))
   })
 
 });

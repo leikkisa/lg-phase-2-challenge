@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-var clients = require('./clients')
+const clients = require('./clients')
 let state = process.argv[2]
 if (state === undefined) {
   console.log("Please include a state when running this file, for example: node searchByState.js Maryland")
 } else {
   console.log('Finding clients in state "' + state + '"...')
 
-  var clientsByState = clients.filter((item) => item.state.toLowerCase() === state.toLowerCase())
+  const clientsByState = clients.filter((item) => item.state.toLowerCase() === state.toLowerCase())
 
-  var selectedPropsByState = clientsByState.map(function(item) {
-     var result = {}
+  const selectedPropsByState = clientsByState.map(function(item) {
+     const result = {}
      result.id = item.id
      result.rep_name = item.rep_name
      result.company = item.company
